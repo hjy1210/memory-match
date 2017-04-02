@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Board from './components/Board'
-
-class App extends Component {
+// https://facebook.github.io/react/docs/optimizing-performance.html
+// Use PureComponent to avoid unnecessary reconciliation to speed up rendering.
+// Key point : don't mutate original state when produce new state.
+class App extends PureComponent {
   render() {
     return (
       <div className="App">

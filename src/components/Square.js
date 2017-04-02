@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import '../css/match.css'
-export default class Square extends Component {
+export default class Square extends PureComponent {
   getBackground(){
     if (this.props.completed) return {background:"gray"}
     else if (this.props.clicked) return {background:"red"}
